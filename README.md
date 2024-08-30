@@ -78,6 +78,6 @@
     - Body (json):
         ```json
       {
-        "measure_uuid": "string",
-        "confirmed_value": integer
+         "measure_uuid": "string",
+         "confirmed_value": integer
       }
