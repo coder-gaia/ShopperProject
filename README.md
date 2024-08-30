@@ -1,38 +1,78 @@
-###  SHOPPER PROJECT (DESAFIO FULL STACK) ###
-# BACKEND #
-# Passos: 
- - Clonar o repositório: https://github.com/coder-gaia/ShopperProject.git
- - Instalar as dependencias necessárias via 'npm install'
- - Executar o seguinte commando: docker run -p 5000:5000 --name backendshopper backendshopper
- - Testar a url fornecida: https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/
- - Rotas para teste via postman:
-    - (GET) https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/{customer_code}/list
-                    exemplo: https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/JAMES/list
-                    Retorna a lista de leituras realizadas pelo cliente fornecido.
+# SHOPPER PROJECT (DESAFIO FULL STACK) #
+## BACKEND ##
+### Passos: ###
+1. **Clonar o repositório:**
+   ```bash
+   git clone https://github.com/coder-gaia/ShopperProject.git
+2. Instalar as dependências necessárias
+    ```bash
+    npm installl
+3. Executar o container docker:
+   ```bash
+   docker run -p 5000:5000 --name backendshopper backendshopper
+   
+4. Testar a url fornecida:
+   ```bash
+   https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev
+   
+5. Rotas para teste via postman:
+   
+    - (GET) Listar leituras:
+      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/{customer_code}/list
                  
-    - (POST) https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/upload
-                Insere uma leitura no banco de dados.
-                Em 'image' deve-se fornecer uma imagem decodificada para base64.
-                body: (json):
-                    {
-                          "image": "base64",
-                          "customer_code": "string",
-                          "measure_datetime": "datetime",
-                          "measure_type": "WATER" ou "GAS"
-                    }
+    - (POST) Insere uma leitura no banco de dados:
+      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/upload
+      Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
+      Body (JSON):
+          
+      {
+        "image": "base64",
+        "customer_code": "string",
+        "measure_datetime": "datetime",
+        "measure_type": "WATER" ou "GAS"
+      }
 
 
-   - (PATCH) https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/confirm
-                Confirma uma leitura. 
-                body (json): 
-                   {
-                        "measure_uuid": "string",
-                        "confirmed_value": integer
-                  }
+   - (PATCH) Confirmar leitura:
+     https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/confirm
+     Body (json): 
+     {
+        "measure_uuid": "string",
+        "confirmed_value": integer
+     }
+
+     
 ### TESTE VIA LOCALHOST ###
- - Instalar as dependencias via 'npm install'
- - Execute no terminal na pasta do projeto o comando: 'npm run start'
- - Rotas no localhost:
-    POST: http://localhost:5000/api/measures/upload
-    PATCH: http://localhost:5000/api/measures/confirm
-    GET: http://localhost:5000/api/measures/customer_code/list - exemeplo: http://localhost:5000/api/measures/JAMES/list
+
+1. Instalar as dependências necessárias
+    ```bash
+    npm installl
+    
+ 2. Executar o servidor local:
+    ```bash
+    npm run start
+    
+ 3. Rotas no localhost:
+    - (GET) Listar leituras:
+      http://localhost:5000/api/measures/customer_code/list
+
+    - (POST) Insere uma leitura no banco de dados:
+      http://localhost:5000/api/measures/upload
+      Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
+      Body (JSON):
+             
+      {
+        "image": "base64",
+        "customer_code": "string",
+        "measure_datetime": "datetime",
+        "measure_type": "WATER" ou "GAS"
+      }
+
+    - (PATCH) Confirmar leitura:
+      http://localhost:5000/api/measures/confirm
+      Body (json):
+      
+      {
+        "measure_uuid": "string",
+        "confirmed_value": integer
+     }
