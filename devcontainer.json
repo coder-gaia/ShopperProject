@@ -1,0 +1,10 @@
+{
+    "name": "Node.js & Docker",
+    "dockerFile": "Dockerfile",
+    "context": ".",
+    "appPort": [
+        "5001:5001"
+    ],
+    "postCreateCommand": "npm install",
+    "remoteUser": "node"
+}
