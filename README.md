@@ -56,11 +56,11 @@
     
  3. Rotas no localhost:
     - (GET) Listar leituras:
-    - ```plaintext
+      ```json
       http://localhost:5000/api/measures/customer_code/list
 
     - (POST) Insere uma leitura no banco de dados:
-    - ```plaintext
+      ```json
       http://localhost:5000/api/measures/upload
     - Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
       Body (JSON):
@@ -80,4 +80,4 @@
       {
         "measure_uuid": "string",
         "confirmed_value": integer
-     }
+      }
