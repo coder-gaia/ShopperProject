@@ -16,15 +16,13 @@
    https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev
    
 5. Rotas para teste via postman:
-   
     - (GET) Listar leituras:
     - ```plaintext
-      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/{customer_code}/list
-                 
+      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/{customer_code}/list     
     - (POST) Insere uma leitura no banco de dados:
-    - ```plaintext
+     ```plaintext
       https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/upload
-    - Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
+- Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
       Body (JSON):
          ```json
       {
