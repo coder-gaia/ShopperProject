@@ -24,7 +24,7 @@
       https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/upload
       Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
       Body (JSON):
-          
+         ```json
       {
         "image": "base64",
         "customer_code": "string",
@@ -35,7 +35,8 @@
 
    - (PATCH) Confirmar leitura:
      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/confirm
-     Body (json): 
+     Body (json):
+       ```json
      {
         "measure_uuid": "string",
         "confirmed_value": integer
@@ -60,6 +61,7 @@
       http://localhost:5000/api/measures/upload
       Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
       Body (JSON):
+        ```json
              
       {
         "image": "base64",
@@ -71,6 +73,7 @@
     - (PATCH) Confirmar leitura:
       http://localhost:5000/api/measures/confirm
       Body (json):
+        ```json
       
       {
         "measure_uuid": "string",
