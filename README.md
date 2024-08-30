@@ -35,7 +35,7 @@
       }
 
    - (PATCH) Confirmar leitura:
-     ```plaintext
+     ```json
      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/confirm
    - Body (json):
        ```json
@@ -73,7 +73,7 @@
       }
 
     - (PATCH) Confirmar leitura:
-    - ```plaintext
+      ```json
       http://localhost:5000/api/measures/confirm
     - Body (json):
         ```json
