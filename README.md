@@ -37,15 +37,13 @@
    - (PATCH) Confirmar leitura:
      ```plaintext
      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/confirm
-     
-    - Body (json):
+   - Body (json):
        ```json
-     {
+        {
          "measure_uuid": "string",
          "confirmed_value": integer
-     }
-
-     
+        }
+       
 ### TESTE VIA LOCALHOST ###
 
 1. Instalar as dependências necessárias
