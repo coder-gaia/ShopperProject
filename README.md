@@ -63,14 +63,14 @@
       ```json
       http://localhost:5000/api/measures/upload
     - Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
-      Body (JSON):
+     - Body (json):
         ```json
-      {
-        "image": "base64",
-        "customer_code": "string",
-        "measure_datetime": "datetime",
-        "measure_type": "WATER" ou "GAS"
-      }
+         {
+           "image": "base64",
+           "customer_code": "string",
+           "measure_datetime": "datetime",
+           "measure_type": "WATER" ou "GAS"
+         }
 
     - (PATCH) Confirmar leitura:
       ```json
