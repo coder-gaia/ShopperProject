@@ -3,11 +3,11 @@
 # Passos: 
  - Clonar o repositório: https://github.com/coder-gaia/ShopperProject.git
  - Instalar as dependencias necessárias via 'npm install'
- - Executar os seguinte commandos: docker run -p 5000:5000 --name backendshopper backendshopper
+ - Executar o seguinte commando: docker run -p 5000:5000 --name backendshopper backendshopper
  - Testar a url fornecida: https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/
  - Rotas para teste via postman:
     - (GET) https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/{customer_code}/list
-                    exemplo: https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/JAMES/list
+                    ## exemplo: https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/JAMES/list
                     Retorna a lista de leituras realizadas pelo cliente fornecido. ##
                  
     - (POST) https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/upload
