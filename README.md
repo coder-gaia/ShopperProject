@@ -28,22 +28,21 @@
       Body (JSON):
          ```json
       {
-        "image": "base64",
-        "customer_code": "string",
-        "measure_datetime": "datetime",
-        "measure_type": "WATER" ou "GAS"
+          "image": "base64",
+          "customer_code": "string",
+          "measure_datetime": "datetime",
+          "measure_type": "WATER" ou "GAS"
       }
-
 
    - (PATCH) Confirmar leitura:
      ```plaintext
      https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/confirm
      
-     Body (json):
+    - Body (json):
        ```json
      {
-        "measure_uuid": "string",
-        "confirmed_value": integer
+         "measure_uuid": "string",
+         "confirmed_value": integer
      }
 
      
@@ -68,7 +67,6 @@
     - Descrição: Insere uma leitura no banco de dados. Em image deve-se fornecer uma imagem decodificada para base64.
       Body (JSON):
         ```json
-             
       {
         "image": "base64",
         "customer_code": "string",
@@ -79,9 +77,8 @@
     - (PATCH) Confirmar leitura:
     - ```plaintext
       http://localhost:5000/api/measures/confirm
-      Body (json):
+    - Body (json):
         ```json
-      
       {
         "measure_uuid": "string",
         "confirmed_value": integer
