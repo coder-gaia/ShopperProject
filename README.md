@@ -28,10 +28,10 @@
     - Body (JSON):
          ```json
       {
-          "image": "base64",
-          "customer_code": "string",
-          "measure_datetime": "datetime",
-          "measure_type": "WATER"
+           "image": "base64",
+           "customer_code": "string",
+           "measure_datetime": "datetime",
+           "measure_type": "WATER"
       }
 
    - (PATCH) Confirmar leitura:
@@ -66,10 +66,10 @@
      - Body (json):
         ```json
          {
-           "image": "base64",
-           "customer_code": "string",
-           "measure_datetime": "datetime",
-           "measure_type": "WATER" ou "GAS"
+            "image": "base64",
+            "customer_code": "string",
+            "measure_datetime": "datetime",
+            "measure_type": "WATER" ou "GAS"
          }
 
     - (PATCH) Confirmar leitura:
