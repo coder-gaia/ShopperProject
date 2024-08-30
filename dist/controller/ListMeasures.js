@@ -1,0 +1,51 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const MeasuresExpenses_1 = __importDefault(require("../model/MeasuresExpenses"));
+const listMeasures = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { customer_code } = req.params;
+    const { measure_type } = req.query;
+    try {
+        const query = { customer_code };
+        if (measure_type) {
+            const validTypes = ['WATER', 'GAS'];
+            if (!validTypes.includes(measure_type.toString().toUpperCase())) {
+                return res.status(400).json({
+                    error_code: 'INVALID_TYPE',
+                    error_description: 'Measure type not allowed'
+                });
+            }
+            query.measure_type = measure_type.toString().toUpperCase();
+        }
+        const measures = yield MeasuresExpenses_1.default.find(query);
+        if (measures.length === 0) {
+            return res.status(404).json({
+                error_code: 'MEASURES_NOT_FOUND',
+                error_description: 'No measure was find.'
+            });
+        }
+        res.status(200).json({
+            customer_code,
+            measures
+        });
+    }
+    catch (error) {
+        console.error('Error listing measures:', error);
+        res.status(500).json({
+            error_code: 'INTERNAL_ERROR',
+            error_description: 'Internal server error. Try again later.'
+        });
+    }
+});
+exports.default = listMeasures;
