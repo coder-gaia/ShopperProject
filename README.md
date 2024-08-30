@@ -17,7 +17,7 @@
    
 5. Rotas para teste via postman:
     - (GET) Listar leituras:
-    - ```plaintext
+    - ```json
       https://probable-space-rotary-phone-vxr9x57pq652p755-5000.app.github.dev/api/measures/{customer_code}/list     
     - (POST) Insere uma leitura no banco de dados:
       ```json
