@@ -6,6 +6,7 @@ if (!process.env.API_URL) {
 }
 
 export const processImage = async (imageBase64: string) => {
+
   try {
     const apiUrl = `${process.env.API_URL}?key=${process.env.GEMINI_API_KEY}`;
     const response = await axios.post(
@@ -35,18 +36,18 @@ export const processImage = async (imageBase64: string) => {
       throw new Error('No candidates found in the response');
     }
 
+  
     const content = candidates[0].content;
     if (!content) {
       throw new Error('No content found in the response');
     }
 
+    const parts = content.parts || [];
+    //const text = parts.map((part: { text: any }) => part.text).join('');
+
     console.log('Content:', content);
 
-
-    const parts = content.parts || [];
-    const text = parts.map((part: { text: any; }) => part.text).join('');
-    
-    const image_url = '';
+    const image_url = "text";
     const measure_value = 0; 
     const measure_uuid = uuidv4();
 
